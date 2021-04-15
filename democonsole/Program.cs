@@ -68,14 +68,14 @@ namespace Computas_Cipher {
                string decrypted =  decrypt_message(text,number_shift);
 
                 if(text_file.Contains("encrypted")) {
-                    Console.WriteLine("Hallo");
+
 
                     string newfile =text_file.Replace("encrypted","decrypted");
-
-                    Console.WriteLine(newfile);
                     File.WriteAllText(newfile, decrypted);
                 }
-
+                else{
+                    Console.WriteLine("Du forsøker å dekryptere en fil som ikke er kryptert");
+                }
             }
             else if (flag == "-e"){
 
